@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apply for a position at Secure Florida Movers. Submit your employment application and resume to join our team in Tampa, FL.">
+    <title>Employment Application | Secure Florida Movers</title>
+
+    <!-- Core Site Assets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <!--
+    /* ===============================================
+        CUSTOM "CYBER GLOW" UI/UX STYLES
+        - Built to match the user's specified design.
+        - Dark, high-contrast theme with vibrant accents.
+        - All styles are self-contained for this page.
+    =============================================== */
+    -->
+    <style>
+        /* --- Page Body & Background --- */
+        body {
+            /* User-specified dark gradient background */
+            background: linear-gradient(135deg, #0a0e1a 0%, #0f1222 100%);
+            color: #E5E7EB; /* Default light text color for readability */
+        }
+
+        /* --- Main Content Wrapper --- */
+        .application-page-wrapper {
+            max-width: 750px;
+            margin: 8rem auto;
+            padding: 0 1rem;
+        }
+
+        /* --- Form Container Card --- */
+        .application-card {
+            background: rgba(28, 31, 46, 0.7);
+            border-radius: var(--border-radius-lg, 12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px); /* Frosted glass effect */
+            overflow: hidden; /* Ensures child elements respect the border radius */
+        }
+
+        /* --- Card Header & Body --- */
+        .application-card-header {
+            padding: 2.5rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .application-card-header h1 {
+            color: #FFFFFF;
+            font-weight: 700;
+            font-size: 2.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .application-card-header p {
+            color: #A9B1D6;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .application-card-body {
+            padding: 2.5rem;
+        }
+
+        /* --- Form Element Styling --- */
+        .form-group {
+            margin-bottom: 1.75rem;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 500;
+            color: #A9B1D6;
+            margin-bottom: 0.6rem;
+            font-size: 0.95rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.9rem 1.1rem;
+            font-size: 1rem;
+            font-family: var(--font-primary, 'Poppins', sans-serif);
+            color: #E5E7EB;
+            background-color: #0f1222;
+            border: 1px solid #34384E;
+            border-radius: var(--border-radius-md, 8px);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .form-control::placeholder {
+            color: #5a607c;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #00ff99;
+            box-shadow: 0 0 10px -2px rgba(0, 255, 153, 0.5);
+            background-color: #1C1F2E;
+        }
+
+        /* Specific styles for radio button groups */
+        .radio-group {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .radio-group label {
+            color: #E5E7EB;
+            font-weight: 400;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .radio-group input[type="radio"] {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 1.25rem;
+            height: 1.25rem;
+            border: 2px solid #34384E;
+            border-radius: 50%;
+            outline: none;
+            cursor: pointer;
+            position: relative;
+            transition: border-color 0.2s ease, background-color 0.2s ease;
+        }
+
+        .radio-group input[type="radio"]:checked {
+            border-color: #00ff99;
+            background-color: #00ff99;
+        }
+
+        .radio-group input[type="radio"]:checked::before {
+            content: '';
+            display: block;
+            width: 0.65rem;
+            height: 0.65rem;
+            background-color: #0a0e1a;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Checkbox group styling */
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .checkbox-group label {
+            color: #E5E7EB;
+            font-weight: 400;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 1.25rem;
+            height: 1.25rem;
+            border: 2px solid #34384E;
+            border-radius: 4px;
+            outline: none;
+            cursor: pointer;
+            position: relative;
+            transition: border-color 0.2s ease, background-color 0.2s ease;
+        }
+
+        .checkbox-group input[type="checkbox"]:checked {
+            border-color: #00ff99;
+            background-color: #00ff99;
+        }
+
+        .checkbox-group input[type="checkbox"]:checked::before {
+            content: '\2713'; /* Checkmark character */
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: #0a0e1a;
+            font-size: 0.8rem;
+            text-align: center;
+            line-height: 1.1;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* --- Submit Button --- */
+        .btn-submit-application {
+            width: 100%;
+            background-image: linear-gradient(135deg, #00ff99, #00ccff);
+            color: #0a0e1a;
+            padding: 1rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            border-radius: var(--border-radius-md, 8px);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+        .btn-submit-application:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px -5px rgba(0, 255, 153, 0.25);
+        }
+
+        /* Section headers for clarity */
+        .section-header {
+            color: #00ff99;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(0, 255, 153, 0.2);
+        }
+
+        /* Legal disclaimers styling */
+        .legal-disclaimer {
+            background-color: rgba(0, 255, 153, 0.05);
+            border-left: 4px solid #00ff99;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: var(--border-radius-md, 8px);
+            color: #A9B1D6;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .legal-disclaimer p {
+            margin-bottom: 1rem;
+        }
+
+        .legal-disclaimer p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Hidden class for conditional display */
+        .hidden {
+            display: none;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .application-card-header h1 {
+                font-size: 1.75rem;
+            }
+            .application-card-header p {
+                font-size: 1rem;
+            }
+            .application-card-body {
+                padding: 1.5rem;
+            }
+            .section-header {
+                font-size: 1.25rem;
+            }
+            .radio-group, .checkbox-group {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar Placeholder: Loaded by script.js -->
+    <div id="navbar-placeholder"></div>
+
+    <main>
+        <div class="application-page-wrapper">
+            <div class="application-card animate-fade-in-up">
+
+                <div class="application-card-header">
+                    <h1>Join Our Team</h1>
+                    <p>Thank you for your interest in Secure Florida Movers. Please complete this application thoroughly and accurately. We look forward to reviewing your qualifications.</p>
+                </div>
+
+                <div class="application-card-body">
+                    <form id="employmentApplicationForm" action="https://formspree.io/f/xvgqaqdj" method="POST">
+
+                        <!-- SECTION 1 – Legal & Company Disclaimers -->
+                        <h2 class="section-header">Section 1: Legal & Company Disclaimers</h2>
+                        <div class="legal-disclaimer">
+                            <p><strong>Important Legal Disclaimers:</strong></p>
+                            <p>Secure Florida Movers reserves the right to conduct background checks, reference checks, and drug testing at any time before, during, or after employment—up to 90 days post-termination—to ensure safety and compliance. Any falsified information or concealment of relevant criminal history may result in immediate termination and legal recovery of any lost wages, damages, or reputational harm.</p>
+                            <p>Secure Florida Movers reserves the right to terminate employment immediately if any employee defames, slanders, or publicly misrepresents the company in person, on social media, or in any digital or printed format. We reserve the right to pursue legal damages in such cases.</p>
+                            <p><strong>Injury & Liability Notice:</strong></p>
+                            <p>By submitting this application, you acknowledge that moving work is physically demanding and may involve heavy lifting, driving, and on-site labor. You understand and accept responsibility for maintaining physical safety and agree to follow all safety protocols. Secure Florida Movers is not liable for injuries caused by negligence or violation of company procedures.</p>
+                        </div>
+
+                        <!-- SECTION 2 – Basic Information -->
+                        <h2 class="section-header">Section 2: Basic Information</h2>
+                        <div class="form-group">
+                            <label for="fullName" class="form-label">Full Legal Name <span style="color: #00ff99;">*</span></label>
+                            <input type="text" id="fullName" name="fullName" class="form-control" placeholder="John Doe" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dob" class="form-label">Date of Birth <span style="color: #00ff99;">*</span></label>
+                            <input type="date" id="dob" name="dob" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number <span style="color: #00ff99;">*</span></label>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="e.g., (123) 456-7890" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address <span style="color: #00ff99;">*</span></label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="you@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address" class="form-label">Residential Address <span style="color: #00ff99;">*</span></label>
+                            <textarea id="address" name="address" rows="3" class="form-control" placeholder="Street, City, State, Zip Code" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Are you legally eligible to work in the U.S.? <span style="color: #00ff99;">*</span></label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="eligibleToWork" value="Yes" required> Yes</label>
+                                <label><input type="radio" name="eligibleToWork" value="No"> No</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Do you have reliable transportation to/from work? <span style="color: #00ff99;">*</span></label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="reliableTransportation" value="Yes" required> Yes</label>
+                                <label><input type="radio" name="reliableTransportation" value="No"> No</label>
+                            </div>
+                        </div>
+
+                        <!-- SECTION 3 – Work Qualifications -->
+                        <h2 class="section-header">Section 3: Work Qualifications</h2>
+                        <div class="form-group">
+                            <label class="form-label">Do you have a valid driver’s license? <span style="color: #00ff99;">*</span></label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="hasDriversLicense" value="Yes" required> Yes</label>
+                                <label><input type="radio" name="hasDriversLicense" value="No"> No</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group hidden" id="licenseDetailsGroup">
+                            <label for="licenseNumber" class="form-label">License Number + State</label>
+                            <input type="text" id="licenseNumber" name="licenseNumber" class="form-control" placeholder="e.g., A1234567 FL">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Can you lift 125 lbs repeatedly during an 8-10 hour shift? <span style="color: #00ff99;">*</span></label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="canLift125" value="Yes" required> Yes</label>
+                                <label><input type="radio" name="canLift125" value="No"> No</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Do you have any experience in the following? <span style="color: #00ff99;">*</span></label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="experience" value="Moving"> Moving</label>
+                                <label><input type="checkbox" name="experience" value="Warehouse"> Warehouse</label>
+                                <label><input type="checkbox" name="experience" value="Customer Service"> Customer Service</label>
+                                <label><input type="checkbox" name="experience" value="CDL Driving"> CDL Driving</label>
+                                <label><input type="checkbox" name="experience" value="Construction"> Construction</label>
+                                <label><input type="checkbox" name="experience" value="None"> None</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Are you currently employed? <span style="color: #00ff99;">*</span></label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="currentlyEmployed" value="Yes" required> Yes</label>
+                                <label><input type="radio" name="currentlyEmployed" value="No"> No</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group hidden" id="notEmployedReasonGroup">
+                            <label for="notEmployedReason" class="form-label">If not, why not?</label>
+                            <textarea id="notEmployedReason" name="notEmployedReason" rows="3" class="form-control"></textarea>
+                        </div>
+
+                        <!-- SECTION 4 – Criminal Disclosure -->
+                        <h2 class="section-header">Section 4: Criminal Disclosure</h2>
+                        <div class="form-group">
+                            <label class="form-label">Have you ever been convicted of a felony or misdemeanor? <span style="color: #00ff99;">*</span></label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="criminalConviction" value="Yes" required> Yes</label>
+                                <label><input type="radio" name="criminalConviction" value="No"> No</label>
+                            </div>
+                            <small style="color: #A9B1D6;">(Note: A criminal record does not automatically disqualify you.)</small>
+                        </div>
+
+                        <div class="form-group hidden" id="criminalExplanationGroup">
+                            <label for="criminalExplanation" class="form-label">If yes, explain below (include offense, date, and jurisdiction):</label>
+                            <textarea id="criminalExplanation" name="criminalExplanation" rows="4" class="form-control"></textarea>
+                        </div>
+
+                        <!-- SECTION 5 – Work History -->
+                        <h2 class="section-header">Section 5: Work History (Most Recent Employer)</h2>
+
+                        <!-- Job 1 -->
+                        <div class="form-group">
+                            <label for="job1Company" class="form-label">Company Name <span style="color: #00ff99;">*</span></label>
+                            <input type="text" id="job1Company" name="job1Company" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="job1Position" class="form-label">Position <span style="color: #00ff99;">*</span></label>
+                            <input type="text" id="job1Position" name="job1Position" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="job1Dates" class="form-label">Dates Worked (e.g., MM/YYYY - MM/YYYY) <span style="color: #00ff99;">*</span></label>
+                            <input type="text" id="job1Dates" name="job1Dates" class="form-control" placeholder="MM/YYYY - MM/YYYY" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="job1Supervisor" class="form-label">Supervisor Name & Contact <span style="color: #00ff99;">*</span></label>
+                            <input type="text" id="job1Supervisor" name="job1Supervisor" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="job1ReasonForLeaving" class="form-label">Reason for Leaving <span style="color: #00ff99;">*</span></label>
+                            <textarea id="job1ReasonForLeaving" name="job1ReasonForLeaving" rows="2" class="form-control" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Can we contact this employer? <span style="color: #00ff99;">*</span></label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="contactEmployer1" value="Yes" required> Yes</label>
+                                <label><input type="radio" name="contactEmployer1" value="No"> No</label>
+                            </div>
+                        </div>
+
+                        <!-- SECTION 6 – Open-Ended Questions (Required) -->
+                        <h2 class="section-header">Section 6: Open-Ended Questions</h2>
+                        <div class="form-group">
+                            <label for="positionInFuture" class="form-label">Where do you see yourself with our company in 6 months to a year? <span style="color: #00ff99;">*</span></label>
+                            <textarea id="positionInFuture" name="positionInFuture" rows="4" class="form-control" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="motivation" class="form-label">What motivates you to get out of bed each and every day? <span style="color: #00ff99;">*</span></label>
+                            <textarea id="motivation" name="motivation" rows="4" class="form-control" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="favoriteQuote" class="form-label">What’s your favorite quote? <span style="color: #00ff99;">*</span></label>
+                            <textarea id="favoriteQuote" name="favoriteQuote" rows="2" class="form-control" required></textarea>
+                        </div>
+
+                        <!-- SECTION 7 – References -->
+                        <h2 class="section-header">Section 7: Professional References (At least 2)</h2>
+
+                        <!-- Reference 1 -->
+                        <h3 class="section-header" style="font-size: 1.2rem; margin-top: 1.5rem; border-bottom: none;">Reference 1 <span style="color: #00ff99;">*</span></h3>
+                        <div class="form-group">
+                            <label for="ref1Name" class="form-label">Name</label>
+                            <input type="text" id="ref1Name" name="ref1Name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ref1Relationship" class="form-label">Relationship</label>
+                            <input type="text" id="ref1Relationship" name="ref1Relationship" class="form-control" placeholder="e.g., Former Manager" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ref1Phone" class="form-label">Phone Number</label>
+                            <input type="tel" id="ref1Phone" name="ref1Phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ref1CompanyJobTitle" class="form-label">Company/Job Title</label>
+                            <input type="text" id="ref1CompanyJobTitle" name="ref1CompanyJobTitle" class="form-control" required>
+                        </div>
+
+                        <!-- Reference 2 -->
+                        <h3 class="section-header" style="font-size: 1.2rem; margin-top: 1.5rem; border-bottom: none;">Reference 2 <span style="color: #00ff99;">*</span></h3>
+                        <div class="form-group">
+                            <label for="ref2Name" class="form-label">Name</label>
+                            <input type="text" id="ref2Name" name="ref2Name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ref2Relationship" class="form-label">Relationship</label>
+                            <input type="text" id="ref2Relationship" name="ref2Relationship" class="form-control" placeholder="e.g., Colleague" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ref2Phone" class="form-label">Phone Number</label>
+                            <input type="tel" id="ref2Phone" name="ref2Phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ref2CompanyJobTitle" class="form-label">Company/Job Title</label>
+                            <input type="text" id="ref2CompanyJobTitle" name="ref2CompanyJobTitle" class="form-control" required>
+                        </div>
+
+                        <!-- SECTION 9 – Final Consent & Digital E-Signature -->
+                        <h2 class="section-header">Section 8: Final Consent & Digital E-Signature</h2>
+                        <div class="legal-disclaimer">
+                            <p>I certify that all the information provided is true and complete. I understand that any misrepresentation or omission of facts is grounds for disqualification or dismissal. I authorize Secure Florida Movers to verify all provided information and acknowledge the company’s right to perform background checks, drug screenings, and reference verifications at any time before, during, or up to 90 days after my employment. I also understand that any defamation or slander or public misrepresentation of the company may result in immediate termination and potential legal action.</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="eSignature" class="form-label">E-signature (Type full legal name) <span style="color: #00ff99;">*</span></label>
+                            <input type="text" id="eSignature" name="eSignature" class="form-control" placeholder="Your Full Legal Name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signatureDate" class="form-label">Date <span style="color: #00ff99;">*</span></label>
+                            <input type="date" id="signatureDate" name="signatureDate" class="form-control" required readonly>
+                        </div>
+
+                        <button type="submit" class="btn-submit-application">Submit Application</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer & Cookie Banner Placeholders: Loaded by script.js -->
+    <div id="footer-placeholder"></div>
+    <div id="cookie-banner-placeholder"></div>
+    <script src="../assets/js/script.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Auto-populate the current date for the signature date field
+            const signatureDateInput = document.getElementById('signatureDate');
+            const today = new Date();
+            const year = today.getFullYear();
+            const month = String(today.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+            const day = String(today.getDate()).padStart(2, '0');
+            signatureDateInput.value = `${year}-${month}-${day}`;
+
+            // --- Conditional display logic for form fields ---
+
+            // Driver's License
+            const hasDriversLicenseRadios = document.querySelectorAll('input[name="hasDriversLicense"]');
+            const licenseDetailsGroup = document.getElementById('licenseDetailsGroup');
+            const licenseNumberInput = document.getElementById('licenseNumber');
+
+            hasDriversLicenseRadios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    if (this.value === 'Yes') {
+                        licenseDetailsGroup.classList.remove('hidden');
+                        licenseNumberInput.setAttribute('required', 'required');
+                    } else {
+                        licenseDetailsGroup.classList.add('hidden');
+                        licenseNumberInput.removeAttribute('required');
+                        licenseNumberInput.value = ''; // Clear value if hidden
+                    }
+                });
+            });
+
+            // Currently Employed
+            const currentlyEmployedRadios = document.querySelectorAll('input[name="currentlyEmployed"]');
+            const notEmployedReasonGroup = document.getElementById('notEmployedReasonGroup');
+            const notEmployedReasonTextarea = document.getElementById('notEmployedReason');
+
+            currentlyEmployedRadios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    if (this.value === 'No') {
+                        notEmployedReasonGroup.classList.remove('hidden');
+                        notEmployedReasonTextarea.setAttribute('required', 'required');
+                    } else {
+                        notEmployedReasonGroup.classList.add('hidden');
+                        notEmployedReasonTextarea.removeAttribute('required');
+                        notEmployedReasonTextarea.value = ''; // Clear value if hidden
+                    }
+                });
+            });
+
+            // Criminal Conviction
+            const criminalConvictionRadios = document.querySelectorAll('input[name="criminalConviction"]');
+            const criminalExplanationGroup = document.getElementById('criminalExplanationGroup');
+            const criminalExplanationTextarea = document.getElementById('criminalExplanation');
+
+            criminalConvictionRadios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    if (this.value === 'Yes') {
+                        criminalExplanationGroup.classList.remove('hidden');
+                        criminalExplanationTextarea.setAttribute('required', 'required');
+                    } else {
+                        criminalExplanationGroup.classList.add('hidden');
+                        criminalExplanationTextarea.removeAttribute('required');
+                        criminalExplanationTextarea.value = ''; // Clear value if hidden
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
